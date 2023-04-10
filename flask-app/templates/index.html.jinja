@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ZAZA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    {{ turbo() }}
+  </head>
+  <body>
+    <button id="toggleButton"></button>
+    <div class="gitub">
+        <header>Vr Universal Captioning</header>
+        <span class="github">
+            https://github.com/TheBeerex/UniversalVR-CC
+        </span>
+    </div>
+
+    <div class="talk2">
+      <section>/Me/</section>
+      <br class
+        >{% include "text.html" %}
+        {% block content %}{% endblock %}</br
+      >
+    </div>
+
+    <div class="option">
+      <div class="grid-item">
+        <button class="dev">Input Device</button>
+        <button class="dev">Languages</button>
+      </div>
+      <section class="grid-item">
+          <button class="lang">English is the primary langage</button>
+        </section>
+    </div>
+
+   
+
+    <script>
+      let btn = document.getElementById('toggleButton')
+      btn.onclick = () => {
+        document.body.classList.toggle('darkMode')
+      }
+    </script>
+  </body>
+</html>
